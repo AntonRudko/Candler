@@ -1,0 +1,157 @@
+body {
+	font-family: 'Comfortaa', sans-serif;
+	/* font-family: "Yeseva One", serif; */
+	box-sizing: border-box;
+	color: #000;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul {
+	list-style: none;
+}
+button {
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+}
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding-inline: 20px;
+}
+.menu__btn {
+	display: none;
+	width: 30px;
+	height: 25px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.menu__btn span {
+	height: 1px;
+	background-color: #7b6152;
+}
+/* HEADER */
+.header {
+	background-color: #fff8f3;
+}
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 4px;
+}
+.menu__list {
+	display: flex;
+	gap: 20px;
+}
+.menu__link {
+	text-transform: uppercase;
+}
+.phone {
+	position: relative;
+}
+.phone::before {
+	position: absolute;
+	background-image: url('../images/header/phone.svg');
+	left: -24px;
+	top: -4px;
+	content: '';
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 20px;
+	aspect-ratio: 1;
+}
+
+/* FOOTER */
+.footer {
+	padding-top: 40px;
+	padding-bottom: 35px;
+}
+.footer__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer__contacts {
+	width: 230px;
+	display: flex;
+	flex-direction: column;
+}
+.email {
+	margin-block: 16px;
+}
+.footer__social {
+	display: flex;
+	gap: 0 15px;
+}
+@media (max-width: 1000px) {
+	/* HEADER */
+	.container {
+	}
+}
+@media (max-width: 900px) {
+	.footer__inner {
+		flex-wrap: wrap;
+	}
+	.footer__contacts {
+		padding-top: 15px;
+		width: 100%;
+		text-align: center;
+	}
+	.footer__social {
+		justify-content: center;
+	}
+}
+@media (max-width: 768px) {
+	body {
+		font-size: 10px;
+	}
+	.container {
+		max-width: 640px;
+	}
+	.phone::before {
+		width: 14px;
+		left: -16px;
+		top: -2px;
+	}
+}
+@media (max-width: 640px) {
+	.container {
+		padding-inline: 10px;
+	}
+	.header__menu-list {
+		display: none;
+	}
+	.menu__btn {
+		display: flex;
+	}
+	.header__menu {
+		order: 1;
+	}
+}
+@media (max-width: 500px) {
+	.footer__inner {
+		flex-direction: column;
+	}
+	.footer__menu {
+		padding: 50px 0;
+	}
+	.footer__menu-list {
+		flex-direction: column;
+	}
+	.footer {
+		padding: 50px 0;
+	}
+}
