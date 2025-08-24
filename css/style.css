@@ -27,13 +27,55 @@ button {
 	cursor: pointer;
 	transition: background-color 0.5s ease-in-out;
 }
+.button {
+	padding: 18px 54px;
+	background-color: #ffbd59;
+	font-weight: 600;
+	font-size: 14px;
+}
 button:hover {
 	background-color: #fff8f3;
+}
+.section--decor {
+	position: relative;
+}
+.section--decor::before {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	width: 24px;
+	height: 33px;
+	content: '';
+	background-image: url('../images/about/about-decore.svg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.section--decor::after {
+	bottom: 10px;
+	left: 23px;
+	position: absolute;
+	width: 1000%;
+	height: 1px;
+	content: '';
+	background-color: #7b6152;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 .container {
 	max-width: 1180px;
 	margin: 0 auto;
 	padding-inline: 20px;
+}
+.section {
+	padding-bottom: 150px;
+}
+.title {
+	font-family: 'Yeseva One', serif;
+	font-size: 40px;
+	margin-bottom: 15px;
+	font-weight: 400;
 }
 .menu__btn {
 	display: none;
@@ -124,6 +166,7 @@ button:hover {
 	width: 370px;
 }
 .top__title {
+	font-weight: 400;
 	margin-bottom: 15px;
 	font-size: 30px;
 	font-family: 'Yeseva One', serif;
@@ -147,6 +190,7 @@ button:hover {
 	background-color: #a5978e;
 	color: #fafafa;
 	padding: 50px 0;
+	margin-bottom: 150px;
 }
 .about__inner {
 	display: flex;
@@ -154,11 +198,6 @@ button:hover {
 }
 .about__content {
 	min-width: 370px;
-}
-.about__title {
-	font-family: 'Yeseva One', serif;
-	font-size: 40px;
-	margin-bottom: 15px;
 }
 .about__text {
 	margin-bottom: 15px;
@@ -172,33 +211,6 @@ button:hover {
 	display: flex;
 	align-items: center;
 	gap: 0 20px;
-	position: relative;
-}
-.about__list::before {
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	width: 24px;
-	height: 33px;
-	content: '';
-	background-image: url('../images/about/about-decore.svg');
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.about__list::after {
-	bottom: 10px;
-	left: 23px;
-	position: absolute;
-	width: 1000%;
-	height: 1px;
-	content: '';
-	background-color: #7b6152;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.about__item {
 }
 .about__item-img {
 	margin-bottom: 10px;
@@ -206,6 +218,45 @@ button:hover {
 .about__item-text {
 	font-size: 11px;
 }
+/* ЗАГАЛЬНІ СТИЛІ ДЛЯ СЕКЦІЙ */
+.section__inner {
+	display: grid;
+	grid-template-columns: 370px auto;
+}
+.section__content-descr {
+	padding-bottom: 92px;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+/* PRODUCTS */
+.products__content {
+	gap: 50px 90px;
+}
+.products__item {
+	margin: 0 auto;
+	width: 290px;
+	text-align: center;
+}
+.products__item--img {
+	margin-bottom: 8px;
+}
+.products__item-price {
+	font-family: 'Yeseva One', serif;
+	margin-bottom: 12px;
+	font-size: 16px;
+	font-weight: 400;
+}
+.products__item-title {
+	font-family: 'Yeseva One', serif;
+	margin-bottom: 16px;
+	font-size: 16px;
+	font-weight: 400;
+}
+.products__item-text {
+	margin-bottom: 27px;
+	font-size: 12px;
+}
+
 @media (max-width: 1000px) {
 	/* HEADER */
 	.top__content {
@@ -228,6 +279,16 @@ button:hover {
 		padding-left: 20px;
 		padding-bottom: 51px;
 	}
+	.section__inner {
+		grid-template-columns: 290px auto;
+		gap: 0 10px;
+	}
+	.products__content {
+		gap: 67px;
+	}
+	.section__text {
+		font-size: 10px;
+	}
 }
 
 @media (max-width: 900px) {
@@ -241,6 +302,12 @@ button:hover {
 	}
 	.footer__social {
 		justify-content: center;
+	}
+	.section__inner {
+		grid-template-columns: 200px auto;
+	}
+	.products__content {
+		gap: 30px 16px;
 	}
 }
 @media (max-width: 768px) {
@@ -297,6 +364,39 @@ button:hover {
 	.about__item-img--3 {
 		width: 120px;
 	}
+	.products__item,
+	.products__item--img {
+		width: 200px;
+		margin-bottom: 6px;
+	}
+	.button {
+		font-size: 12px;
+		padding: 10px 26px;
+	}
+	.products__item-text {
+		font-size: 8px;
+		margin-bottom: 18px;
+	}
+	.products__item-title {
+		font-size: 12px;
+		margin-bottom: 7px;
+	}
+	.products__item-price {
+		font-size: 12px;
+		margin-bottom: 9px;
+	}
+	.about {
+		margin-bottom: 50px;
+	}
+	.section {
+		padding-bottom: 50px;
+	}
+	.section__content-descr {
+		padding-bottom: 62px;
+	}
+	.section__descr {
+		width: 200px;
+	}
 }
 @media (max-width: 640px) {
 	.container {
@@ -324,6 +424,14 @@ button:hover {
 	}
 	.header__menu {
 		order: 1;
+	}
+	.section__inner {
+		display: block;
+	}
+	.section__descr {
+		margin: 0 auto 30px;
+		width: 300px;
+		text-align: center;
 	}
 }
 @media (max-width: 500px) {
@@ -432,5 +540,29 @@ button:hover {
 		padding-left: 12px;
 		margin-left: 12px;
 		padding-bottom: 30px;
+	}
+	.section__descr {
+		margin: 0 auto 25px;
+		width: 235px;
+	}
+	.products__item,
+	.products__item--img {
+		width: 150px;
+	}
+	.products__content {
+		gap: 40px 7px;
+	}
+	.button {
+		font-size: 8px;
+	}
+	.products__item-price {
+		font-size: 10px;
+		margin-bottom: 5px;
+	}
+	.products__item-title {
+		font-size: 10px;
+	}
+	.products__item-text {
+		font-size: 8px;
 	}
 }
