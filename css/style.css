@@ -431,6 +431,33 @@ button:hover {
 .sertificates__content .swiper-pagination {
 	margin-bottom: 60px;
 }
+/* PROMO */
+.promo {
+	background-image: url('../images/promo/promo.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 140px 0;
+}
+.promo__inner {
+	display: flex;
+	align-items: center;
+}
+.promo__text {
+	font-size: 40px;
+	color: #fff;
+	font-family: 'Yeseva One', serif;
+	padding-left: 56px;
+	max-width: 765px;
+	margin-right: 110px;
+}
+.promo__link {
+	color: #272727;
+	background-color: #ffbd59;
+	display: inline-block;
+	padding: 12px 25px;
+}
+
 @media (max-width: 1050px) {
 	.steps__list {
 		gap: 37px 35px;
@@ -827,9 +854,9 @@ button:hover {
 		margin: 0 auto 20px;
 	}
 	.feedback__item-video {
-        width: 250px;
-    }
-	.feedback__item-btn{
+		width: 250px;
+	}
+	.feedback__item-btn {
 		bottom: 0;
 		right: 0;
 		left: 0;
