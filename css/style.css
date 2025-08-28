@@ -351,6 +351,86 @@ button:hover {
 .team__item-descr {
 	font-size: 10px;
 }
+/* FEEDBACK */
+.feedback__inner {
+	grid-template-columns: 370px auto auto;
+}
+.feedback__content {
+	padding-bottom: 110px;
+}
+.swiper-button-right {
+	padding: 0 10px;
+	margin: auto 0;
+}
+.feedback__item {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 0 16px;
+	align-items: center;
+}
+.feedback__descr {
+	margin-right: 20px;
+}
+.feedback__item-video {
+	position: relative;
+}
+.feedback__item-videobtn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.feedback__item-content {
+	padding-bottom: 70px;
+}
+.feedback__item-sociallink {
+	margin-bottom: 12px;
+}
+.feedback__item-name {
+	font-family: 'Yeseva One', serif;
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+.feedback__item-text {
+	margin-bottom: 15px;
+}
+.feedback__item-btn {
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+}
+.feedback__slider {
+	width: 760px;
+	overflow: hidden;
+}
+.feedback__content .swiper-pagination {
+	bottom: 50px;
+}
+.swiper-pagination-bullet {
+	background-color: #bea495;
+	width: 53px;
+	height: 4px;
+	border-radius: 0;
+	opacity: 1;
+}
+.swiper-pagination-bullet-active {
+	background-color: #7b6152;
+}
+/* CERTIFICATES */
+.certificates__descr {
+	margin-right: 20px;
+}
+
+.certificates__slider {
+	width: 1135px;
+	overflow: hidden;
+}
+.sertificates__content {
+	padding-bottom: 114px;
+}
+.sertificates__content .swiper-pagination {
+	margin-bottom: 60px;
+}
 @media (max-width: 1050px) {
 	.steps__list {
 		gap: 37px 35px;
@@ -396,6 +476,18 @@ button:hover {
 	}
 	.team {
 		padding: 50px 0;
+	}
+	.feedback__inner {
+		grid-template-columns: 260px auto auto;
+	}
+	.feedback__slider {
+		width: 690px;
+	}
+	.sertificates__content img {
+		width: 280px;
+	}
+	.certificates__slider {
+		width: 880px;
 	}
 }
 
@@ -558,6 +650,21 @@ button:hover {
 	.team__item-descr {
 		font-size: 7px;
 	}
+	.feedback__item-video {
+		width: 200px;
+	}
+	.feedback__item-img {
+		width: 200px;
+	}
+	.feedback__slider {
+		width: 447px;
+	}
+	.feedback__item-content {
+		padding-bottom: 45px;
+	}
+	.certificates__slider {
+		width: 636px;
+	}
 }
 @media (max-width: 640px) {
 	.container {
@@ -666,6 +773,13 @@ button:hover {
 	.team {
 		margin-bottom: 50px;
 	}
+	.sertificates__content img {
+		width: 200px;
+	}
+	.certificates__slider {
+		width: 415px;
+		margin: 0 auto;
+	}
 }
 @media (max-width: 404px) {
 	.steps__list {
@@ -696,6 +810,31 @@ button:hover {
 	}
 	.team__item-descr {
 		font-size: 10px;
+	}
+	.certificates__slider {
+		width: 200px;
+	}
+	.feedback__item {
+		grid-template-columns: auto;
+		text-align: center;
+	}
+	.feedback__slider {
+		width: 250px;
+		margin: 0 auto;
+	}
+	.feedback__item-img {
+		width: 250px;
+		margin: 0 auto 20px;
+	}
+	.feedback__item-video {
+        width: 250px;
+    }
+	.feedback__item-btn{
+		bottom: 0;
+		right: 0;
+		left: 0;
+		max-width: 100px;
+		margin: 0 auto;
 	}
 }
 @media (max-width: 360px) {
