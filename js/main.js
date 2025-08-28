@@ -33,3 +33,19 @@ const swiperTwo = new Swiper('.certificates__slider', {
 		},
 	},
 });
+
+const questions__list = document.querySelector('.questions__list');
+const question__titles = questions__list.querySelectorAll('.question__title');
+
+question__titles.forEach.call(question__titles, function (question__title) {
+	question__title.addEventListener('click', function () {
+		const currentText = question__title.parentElement.querySelector('.question__answear');
+		question__title.classList.toggle('question__title-active');
+		currentText.classList.toggle('question__answear-wisible');
+		if (currentText.classList.contains('question__answear-wisible')) {
+			currentText.style.maxHeight = currentText.scrollHeight + 'px';
+		} else {
+			currentText.style.maxHeight = null;
+		}
+	});
+});

@@ -457,6 +457,90 @@ button:hover {
 	display: inline-block;
 	padding: 12px 25px;
 }
+/* CONTACTS */
+.contacts {
+	padding: 150px 0 50px;
+}
+.contacts__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.form {
+	background-color: #fff;
+	width: 664px;
+	padding: 75px 42px 67px;
+}
+.form__title {
+	font-family: 'Yeseva One', serif;
+	font-size: 40px;
+	margin-bottom: 60px;
+}
+.form__input {
+	background-color: #fff;
+	border: none;
+	border-bottom: 1px solid black;
+	width: 100%;
+	display: block;
+	margin-bottom: 15px;
+	padding: 7px 10px;
+	color: #000;
+}
+.form__input::placeholder {
+	color: #b3b3b3;
+	font-size: 14px;
+	font-family: 'Comfortaa', sans-serif;
+}
+.form__btn {
+	background-color: #ffbd59;
+	padding: 17px 34px;
+	margin-top: 15px;
+}
+/* QUESTION */
+.questions__list {
+}
+.question__item {
+	background: #fafafa;
+	margin-bottom: 10px;
+}
+.question__title {
+	text-align: left;
+	width: 100%;
+	position: relative;
+	font-family: 'Yeseva One', serif;
+	font-size: 16px;
+	display: block;
+	background-color: transparent;
+	padding: 16px 50px 16px 13px;
+}
+.question__title::after {
+	top: 17px;
+	right: 26px;
+	position: absolute;
+	content: '';
+	background-image: url('../images/questions/Vector.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 16px;
+	height: 16px;
+}
+.question__title.question__title-active::after {
+	transform: rotate(180deg);
+}
+.question__answear {
+	/* padding: 20px 40px; */
+	opacity: 0;
+	max-height: 0;
+	transition: opacity 0.3s, max-height 0.3s;
+}
+
+.question__answear ol {
+	padding: 20px 40px;
+}
+.question__answear.question__answear-wisible {
+	opacity: 1;
+}
 
 @media (max-width: 1050px) {
 	.steps__list {
@@ -515,6 +599,16 @@ button:hover {
 	}
 	.certificates__slider {
 		width: 880px;
+	}
+	.promo__link {
+		min-width: 135px;
+		text-align: center;
+	}
+	.promo__text {
+		padding-left: 0;
+	}
+	.contacts__img {
+		width: 355px;
 	}
 }
 
@@ -692,6 +786,28 @@ button:hover {
 	.certificates__slider {
 		width: 636px;
 	}
+	.promo__text {
+		font-size: 15px;
+	}
+	.form__btn {
+		padding: 13px 28px;
+	}
+	.promo {
+		padding: 67px 0;
+	}
+	.contacts__img {
+		width: 187px;
+		object-fit: cover;
+	}
+	.form {
+		width: 440px;
+		gap: 0 20px;
+		padding: 30px 22px;
+	}
+	.form__title {
+		font-size: 15px;
+		margin-bottom: 20px;
+	}
 }
 @media (max-width: 640px) {
 	.container {
@@ -806,6 +922,18 @@ button:hover {
 	.certificates__slider {
 		width: 415px;
 		margin: 0 auto;
+	}
+	.promo {
+		padding: 42px 0;
+	}
+	.contacts__img {
+		display: none;
+	}
+	.form__input::placeholder {
+		font-size: 12px;
+	}
+	.contacts {
+		padding-top: 50px;
 	}
 }
 @media (max-width: 404px) {
@@ -937,5 +1065,8 @@ button:hover {
 	.courses__item,
 	.courses__item img {
 		width: 255px;
+	}
+	.promo__text {
+		margin-right: 50px;
 	}
 }
